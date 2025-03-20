@@ -32,10 +32,21 @@ const App = () => {
     { name: 'Mount Abu', country: 'India' },
     { name: 'Tirupati', country: 'India' },
     ]
+
+    const indianCities =cityList.filter(cityList => cityList.country === "India")
     
   return (
     <div id="main">
-               {/* Do not remove the main div */}
+      <p style={{
+        fontWeight:"bolder",
+        fontSize:"20px"
+      }}> Indian Cities </p>
+     <div>
+      {indianCities.map(indianCities => (
+        <ol>{indianCities.name}</ol>
+      ))}
+     </div>
+               
     </div>
   )
 }
